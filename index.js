@@ -1,7 +1,21 @@
 'use strict'
 
-const btn = document.querySelectorAll('.btn')
+class Human {
+    constructor(name, sername, age){
+        this.name = name
+        this.age = age
+        this.sername = sername
+        this.work = true        
+    }
+    tohome(work){
+        if(work) {
+            console.log(`${this.age} работает`)
+        } else {
+            console.log(`${this.name} не работает`);
+        }
+    }
+}
 
-btn.forEach(oneBTN => oneBTN.addEventListener('click', () => {
-    oneBTN.style.fontSize = '25px'
-}))
+const john = new Human('John', 'Smith', 22)
+
+
